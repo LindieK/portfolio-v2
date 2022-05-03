@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import "mixins";
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -14,4 +16,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+
+  @include mq(sm) {
+      max-width: $col-sm;
+  }
+
+  @include mq(md) {
+      max-width: $col-md;
+  }
+
+  @include mq(lg) {
+      max-width: $col-lg;
+  }
+
+  @include mq(xl) {
+      max-width: $col-xl;
+  }
 }
