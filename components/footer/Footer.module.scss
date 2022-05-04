@@ -1,0 +1,29 @@
+.footer{
+    border-top: 1px solid $black-80;
+    padding: 3.07692em 0;
+    font-size: 0.72222em;
+    color: $black-40;
+
+    & .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .links{
+            display: flex;
+            flex-direction: column;
+    
+            @media screen and (min-width: $md) {
+                flex-direction: row;
+            }
+    
+            a {
+                padding-bottom: 0.46153em; //6px
+    
+                @media screen and (min-width: $md) {
+                    padding: 0 1.30769em;
+                }
+            }
+        }
+    }
+}
