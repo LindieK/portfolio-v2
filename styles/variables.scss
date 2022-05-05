@@ -1,5 +1,7 @@
 /*Colours*/
 $gradient: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+$gradient-animation: linear-gradient(90deg, #00c9ff, #92fe9d, #92fe9d, #00c9ff);
+$gradient-fallback: #00c9ff;
 $white: #fbfbfb;
 $black-100: #181f26;
 $black-80: #3f444a;
@@ -10,22 +12,26 @@ $success: #309053;
 
 /*Device Breakpoints( from stated value upwards) */
 $def:          320px;
-$xs: 23.5em;     // 376px @media (max-width: $xs) {}
-$sm: 32em;       // (min-width: 576px)
-$md: 42.66666em; // (min-width: 768px)
-$lg: 55.11111em; // (min-width: 992px)
-$gl: 56.88888em; //! gap `lg - xl` (min-width: 1024px)
-$xl: 66.66666em;      // (min-width: 1200px)
+$xs: 23.5rem;     // 376px @media (max-width: $xs) {}
+$sm: 32rem;       // (min-width: 576px)
+$md: 42.66666rem; // (min-width: 768px)
+$lg: 55.11111rem; // (min-width: 992px)
+$gl: 56.88888rem; //! gap `lg - xl` (min-width: 1024px)
+$xl: 66.66666rem;      // (min-width: 1200px)
+$xxl: 77.77777rem; //(min-width: 1400px)
 
 /*For Container*/
 $col-sm: 540px;  // (max-width: 540px)
 $col-md: 720px;  // (max-width: 720px)
 $col-lg: 960px;  // (max-width: 960px)
 $col-xl: 1140px; // (max-width: 1140px)
+$col-xxl: 1280px; // (max-width: 1280px)
 
 $breakpoints: (
+    xs: $xs,
     sm: $sm,
     md: $md,
     lg: $lg,
-    xl: $xl
+    xl: $xl,
+    xxl: $xxl
 );
