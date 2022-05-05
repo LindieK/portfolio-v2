@@ -1,7 +1,23 @@
 @mixin mq($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-        @content;
+      @if $breakpoint != "def" {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+          @content;
+        }
+      } @else {
+        @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+          @content;
+        }
       }
     }
+}
+
+@mixin animation($name, $duration, $timing-function, $iteration-count, $direction) {
+  animation: $name $duration $timing-function $iteration-count $direction;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
 }

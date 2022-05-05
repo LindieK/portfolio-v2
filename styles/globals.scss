@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -40,4 +41,50 @@ a {
   @include mq(xl) {
       max-width: $col-xl;
   }
+
+  @include mq(xxl) {
+    max-width: $col-xxl;
+}
+}
+
+h1 {
+  font-size: 1.5em; //27px
+  font-weight: 800;
+
+  @include mq(xs){
+    font-size: 2em; //36px
+  }
+
+  @include mq(md){
+    font-size: 2.666666em; //48px
+  }
+
+  @include mq(lg){
+    font-size: 3.333333em; //60px
+  }
+}
+
+h2 {
+  font-size: 2.666666em; //48px
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 2em; //36px
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.666666em; //30px
+  font-weight: 800;
+}
+
+h5 {
+  font-size: 1.333333em; //24px
+  font-weight: 800;
+}
+
+h6 {
+  font-size: 1.111111em; //20px
+  font-weight: 800;
 }
