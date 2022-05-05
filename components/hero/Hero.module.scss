@@ -35,7 +35,11 @@
         }
 
         & img {
+            width: 1.666666rem; //30px
 
+            @include mq(sm){
+                width: unset;
+            }
             @include animation(floatingButton, 2s, linear, infinite, alternate);
             @include keyframes(floatingButton){
                 0%   { transform: translateY(0); }

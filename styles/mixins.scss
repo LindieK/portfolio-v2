@@ -1,6 +1,6 @@
 @mixin mq($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-      @if $breakpoint != "xs" {
+      @if $breakpoint != "def" {
         @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
           @content;
         }

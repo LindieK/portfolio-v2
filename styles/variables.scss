@@ -28,6 +28,7 @@ $col-xl: 1140px; // (max-width: 1140px)
 $col-xxl: 1280px; // (max-width: 1280px)
 
 $breakpoints: (
+    def: $def,
     xs: $xs,
     sm: $sm,
     md: $md,
