@@ -62,6 +62,9 @@ h1 {
   @include mq(lg){
     font-size: 3.333333em; //60px
   }
+  @include mq(xl){
+    font-size: 4.444444em; //80px
+  }
 }
 
 h2 {
