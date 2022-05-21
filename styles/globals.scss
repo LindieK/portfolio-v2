@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
 * {
   box-sizing: border-box;
 }
@@ -62,7 +67,7 @@ h1 {
   @include mq(lg){
     font-size: 3.333333em; //60px
   }
-  @include mq(xl){
+  @include mq(xxl){
     font-size: 4.444444em; //80px
   }
 }
@@ -73,8 +78,15 @@ h2 {
 }
 
 h3 {
-  font-size: 2em; //36px
+  font-size: 1.111111em; //20px
   font-weight: 800;
+
+  @include mq(md){
+    font-size: 1.333333em; //24px
+  }
+  @include mq(xl){
+    font-size: 1.666666em; //30px
+  }
 }
 
 h4 {
