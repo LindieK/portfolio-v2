@@ -10,6 +10,17 @@ body {
   scroll-behavior: smooth;
 }
 
+section {
+  padding-top: 3.333333rem; //100px 
+
+  @include mq(sm) {
+    padding-top: 4.444444rem;
+  }
+  @include mq(md) {
+    padding-top: 5.555555rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -73,8 +84,16 @@ h1 {
 }
 
 h2 {
-  font-size: 2.666666em; //48px
+  font-size: 2em; //36px
   font-weight: 800;
+  margin-bottom: 0.555555rem; //10px
+
+  @include mq(md){
+    font-size: 2.222222em; //40px
+  }
+  @include mq(xl){
+    font-size: 2.666666em; //48px
+  }
 }
 
 h3 {
