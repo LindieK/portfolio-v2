@@ -10,11 +10,27 @@ body {
   scroll-behavior: smooth;
 }
 
+section {
+  padding-top: 3.333333rem; //100px 
+
+  @include mq(sm) {
+    padding-top: 4.444444rem;
+  }
+  @include mq(md) {
+    padding-top: 5.555555rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
 * {
   box-sizing: border-box;
 }
@@ -62,16 +78,34 @@ h1 {
   @include mq(lg){
     font-size: 3.333333em; //60px
   }
+  @include mq(xxl){
+    font-size: 4.444444em; //80px
+  }
 }
 
 h2 {
-  font-size: 2.666666em; //48px
+  font-size: 2em; //36px
   font-weight: 800;
+  margin-bottom: 0.555555rem; //10px
+
+  @include mq(md){
+    font-size: 2.222222em; //40px
+  }
+  @include mq(xl){
+    font-size: 2.666666em; //48px
+  }
 }
 
 h3 {
-  font-size: 2em; //36px
+  font-size: 1.111111em; //20px
   font-weight: 800;
+
+  @include mq(md){
+    font-size: 1.333333em; //24px
+  }
+  @include mq(xl){
+    font-size: 1.666666em; //30px
+  }
 }
 
 h4 {

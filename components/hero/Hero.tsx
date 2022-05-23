@@ -2,10 +2,10 @@ import React from "react";
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
+import { HeroText } from "../../public/page-data";
 import styles from "./Hero.module.scss"
 
 const Hero = () => {
-  const HeroText = "Hey, I'm Linda Okorie. A Product Engineer combining my interest in design and code to build products that broaden perspectives about what is possible.";
   const container = {
     hidden: { opacity: 0, transition:{ when: "afterChildren"} },
     visible: { opacity: 1, transition: { when: "beforeChildren", staggerChildren: 0.1, delayChildren: 0.5}}
