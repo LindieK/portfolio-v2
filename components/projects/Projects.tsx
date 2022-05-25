@@ -24,7 +24,8 @@ const Projects = () => {
   }, [control, inView]);
 
   return (
-    <section id="projects" className={`container`}>
+    <section id="projects" className={styles.projects}>
+      <div className='container'>
         <div className={styles.sectionTitle}>
           <h2>Projects</h2>
           <p>I am always experimenting with new technologies and improving my knowledge in product design and development</p>
@@ -36,6 +37,7 @@ const Projects = () => {
             )
           })}
         </motion.div>
+      </div>
     </section>
   )
 }
