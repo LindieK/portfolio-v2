@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import Hero from '../components/hero/Hero'
 import Projects from '../components/projects/Projects'
+import Articles from '../components/articles/Articles'
+import Tools from '../components/tools/Tools'
 import Footer from '../components/footer/Footer'
 import styles from '../styles/Home.module.scss'
 
@@ -17,6 +19,8 @@ const Home: NextPage = () => {
 
       <Hero />
       <Projects />
+      <Articles />
+      <Tools />
       <Footer />
     </div>
   )

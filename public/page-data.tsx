@@ -25,17 +25,20 @@ export const projects = [
     }
 ];
 
-export const Articles = [
+export const articles = [
     {
         title: "React Router’s useRoutes hook",
-        thumbnail: "/images/ferenc-almasi-L8KQIPCODV8-unsplash.jpg"
+        thumbnail: "/images/ferenc-almasi-L8KQIPCODV8-unsplash.jpg",
+        link:"https://dev.to/dauntless/react-routers-useroutes-hook-38fc"
     },
     {
         title: "10 Icon packs from the Figma Community you should have in your toolkit",
-        thumbnail: "/images/icon-pack.jpg"
+        thumbnail: "/images/icon-pack.png",
+        link:"https://uxdesign.cc/10-icon-packs-from-the-figma-community-to-have-in-your-toolkit-4786db320ce3"
     },
     {
         title: "What Data Structures and Algorithims Mean To Me",
-        thumbnail: "/images/tim-gouw-1K9T5YiZ2WU-unsplash.jpg"
+        thumbnail: "/images/tim-gouw-1K9T5YiZ2WU-unsplash.jpg",
+        link:"https://dev.to/dauntless/what-data-structures-and-algorithms-should-mean-to-you-9kn"
     }
 ];

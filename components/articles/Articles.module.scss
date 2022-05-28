@@ -1,6 +1,6 @@
 @import "../../styles/mixins.scss";
 
-.projects{
+.articles {
     border-bottom: 1px solid $black-80;
 
     .sectionTitle {
@@ -19,6 +19,17 @@
         }
         @include mq(xl){
             width: 40%
+        }
+    }
+
+    & .cardsSection {
+        display: flex;
+        flex-direction: column;
+
+        @include mq(md){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 4.444444rem 0; //80px
         }
     }
 }
