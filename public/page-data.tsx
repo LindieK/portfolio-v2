@@ -42,3 +42,26 @@ export const articles = [
         link:"https://dev.to/dauntless/what-data-structures-and-algorithms-should-mean-to-you-9kn"
     }
 ];
+
+export const FooterLinks = [
+    {
+        name:"LinkedIn",
+        link:"https://linkedin.com/in/linda-okorie/"
+    },
+    {
+        name:"Github",
+        link:"https://github.com/LindieK"
+    },
+    {
+        name:"Twitter",
+        link: "https://twitter.com/lindaokorie_"
+    },
+    {
+        name:"Dribbble",
+        link:"https://dribbble.com/lindaokorie"
+    },
+    {
+        name:"Behance",
+        link:"https://behance.net/lindaokorie"
+    }
+]
