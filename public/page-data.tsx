@@ -14,7 +14,7 @@ export const projects = [
         description: "Shortly utilizes the shrtcode API to shorten URLs. The site saves past queries so you don’t have to repeat yourself if you lose the shortened URL.",
         tools: ["React", "Sass", "REST APIs"],
         thumbnail: "/images/url-shortener.jpg",
-        link: "https://lindiek.github.io/url-shortner"
+        link: "https://lindiek.github.io/url-shortener/"
     },
     {
         title: "Dispatcha",
