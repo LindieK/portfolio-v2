@@ -14,7 +14,7 @@ export const projects = [
         description: "Shortly utilizes the shrtcode API to shorten URLs. The site saves past queries so you don’t have to repeat yourself if you lose the shortened URL.",
         tools: ["React", "Sass", "REST APIs"],
         thumbnail: "/images/url-shortener.jpg",
-        link: "https://lindiek.github.io/url-shortner"
+        link: "https://lindiek.github.io/url-shortener/"
     },
     {
         title: "Dispatcha",
@@ -42,3 +42,26 @@ export const articles = [
         link:"https://dev.to/dauntless/what-data-structures-and-algorithms-should-mean-to-you-9kn"
     }
 ];
+
+export const FooterLinks = [
+    {
+        name:"LinkedIn",
+        link:"https://linkedin.com/in/linda-okorie/"
+    },
+    {
+        name:"Github",
+        link:"https://github.com/LindieK"
+    },
+    {
+        name:"Twitter",
+        link: "https://twitter.com/lindaokorie_"
+    },
+    {
+        name:"Dribbble",
+        link:"https://dribbble.com/lindaokorie"
+    },
+    {
+        name:"Behance",
+        link:"https://behance.net/lindaokorie"
+    }
+]
