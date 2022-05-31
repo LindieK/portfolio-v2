@@ -1,5 +1,6 @@
-import React from 'react'
-import { motion } from 'framer-motion';
+import React, { useEffect }  from 'react'
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import ArrowIcon from './ArrowIcon'
 import styles from "./Project.module.scss"
@@ -10,24 +11,39 @@ interface Project {
     desc: string;
     tools: string[];
     link: string;
-    projectVariant: any
 }
 
-const Project = ({thumbnail, title, desc, tools, link, projectVariant}: Project) => {
-    const ImageVariant = {
-        hover: {
-            scale: 1.12
-        }
-    }
+const transition = { delay: 1, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
 
-    const toolsList = {
-        hover: {
-            scale: 1.125
-        }
+const projectVariants = {
+  initial: { scale: 0.9, opacity: 0},
+  enter: { scale: 1, opacity: 1, transition }
+}
+
+const ImageVariant = {
+    hover: {
+        scale: 1.12
     }
+}
+
+const toolsList = {
+    hover: {
+        scale: 1.125
+    }
+}
+
+const Project = ({thumbnail, title, desc, tools, link}: Project) => {
+    const control = useAnimation();
+    const [ ref, inView ] = useInView();
+    
+    useEffect(()=> {
+        if(inView){
+          control.start("enter");
+        }
+    }, [control, inView]);
 
   return (
-    <motion.div className={styles.project} variants={projectVariant}>
+    <motion.div className={styles.project} ref={ref} animate={control} initial="initial" variants={projectVariants}>
         <a href={link} className={styles.flexItemWrapper} target="_blank" rel="noreferrer">
             <motion.div className={styles.imageWrapper} variants={ImageVariant}  whileHover="hover">
                 <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`}/>

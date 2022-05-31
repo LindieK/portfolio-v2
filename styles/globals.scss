@@ -11,13 +11,13 @@ body {
 }
 
 section {
-  padding-top: 3.333333rem; //100px 
+  padding-top: 3.333333rem; 
 
   @include mq(sm) {
-    padding-top: 4.444444rem;
+    padding-top: 4.444444rem; //80px
   }
   @include mq(md) {
-    padding-top: 5.555555rem;
+    padding-top: 5.555555rem; //100px 
   }
 }
 
@@ -64,29 +64,29 @@ img {
 }
 
 h1 {
-  font-size: 1.5em; //27px
+  font-size: 1.5rem; //27px
   font-weight: 800;
 
   @include mq(xs){
-    font-size: 2em; //36px
+    font-size: 2rem; //36px
   }
 
   @include mq(md){
-    font-size: 2.666666em; //48px
+    font-size: 2.666666rem; //48px
   }
 
   @include mq(lg){
-    font-size: 3.333333em; //60px
+    font-size: 2.999999rem; //54px
   }
   @include mq(xxl){
-    font-size: 4.444444em; //80px
+    font-size: 4.444444rem; //80px
   }
 }
 
 h2 {
   font-size: 2em; //36px
   font-weight: 800;
-  margin-bottom: 0.555555rem; //10px
+  margin: 0.555555rem 0; //10px 0px
 
   @include mq(md){
     font-size: 2.222222em; //40px
