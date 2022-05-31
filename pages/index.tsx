@@ -14,6 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Linda Okorie</title>
         <meta name="description" content="The portfolio of Linda Okorie, a Product Engineer" />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
