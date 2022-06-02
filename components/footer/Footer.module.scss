@@ -18,7 +18,12 @@
     
             a {
                 padding-bottom: 0.46153em; //6px
-    
+                
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                }
+
                 @media screen and (min-width: $md) {
                     padding: 0 1.30769em;
                 }

@@ -11,6 +11,8 @@ interface Project {
     desc: string;
     tools: string[];
     link: string;
+    handleProjectEnter: () => void;
+    handleProjectLeave: () => void
 }
 
 const transition = { delay: 1, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -32,7 +34,7 @@ const toolsList = {
     }
 }
 
-const Project = ({thumbnail, title, desc, tools, link}: Project) => {
+const Project = ({thumbnail, title, desc, tools, link, handleProjectEnter, handleProjectLeave}: Project) => {
     const control = useAnimation();
     const [ ref, inView ] = useInView();
     
@@ -44,14 +46,16 @@ const Project = ({thumbnail, title, desc, tools, link}: Project) => {
 
   return (
     <motion.div className={styles.project} ref={ref} animate={control} initial="initial" variants={projectVariants}>
-        <a href={link} className={styles.flexItemWrapper} target="_blank" rel="noreferrer">
+        <div className={styles.flexItemWrapper}>
             <motion.div className={styles.imageWrapper} variants={ImageVariant}  whileHover="hover">
-                <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`}/>
+                <a href={link} target="_blank" rel="noreferrer">
+                    <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`} onMouseEnter={handleProjectEnter} onMouseLeave={handleProjectLeave}/>
+                </a>
             </motion.div>
-        </a>
+        </div>
         <div className={styles.flexItemWrapper}>
             <div className={styles.projectText}>
-                <a href={link} className={styles.title} target="_blank" rel="noreferrer">
+                <a href={link} className={styles.title} target="_blank" rel="noreferrer" onMouseEnter={handleProjectEnter} onMouseLeave={handleProjectLeave}>
                     <h3>{title}</h3>
                     <div className={styles.svgWrapper}>
                         <ArrowIcon variant={ImageVariant} hover="hover"/>

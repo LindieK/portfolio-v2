@@ -16,7 +16,7 @@
 
         & .imageWrapper {
             width: 100%;
-            cursor: pointer;
+
 
             @include mq(sm) {
                 width: 27.7777777rem; //500px
@@ -32,7 +32,6 @@
             .title {
                 display: flex;
                 align-items: center;
-                cursor: pointer;
     
                 h3 {
                     color: $white;

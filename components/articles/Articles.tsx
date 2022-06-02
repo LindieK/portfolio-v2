@@ -12,7 +12,12 @@ const articleVariants = {
   enter: { scale: 1, opacity: 1, transition }
 }
 
-const Articles = () => {
+interface Articles {
+  handleArticleEnter: () => void;
+  handleArticleLeave: () => void;
+}
+
+const Articles = ({handleArticleEnter, handleArticleLeave}: Articles) => {
   const articleControl = useAnimation();
   const [ ref, inView ] = useInView({threshold: 0.5});
 
@@ -31,7 +36,7 @@ const Articles = () => {
         </div>
         <motion.div ref={ref} className={styles.cardsSection} initial="initial" animate={articleControl} variants={ { enter: { transition: { delay: 3, staggerChildren: 0.25 } } } }>
           {articles.map((item, index)=> {
-            return <Card key={index} thumbnail={item.thumbnail} title={item.title} link={item.link} cardVariant={articleVariants}/>
+            return <Card key={index} thumbnail={item.thumbnail} title={item.title} link={item.link} cardVariant={articleVariants} handleArticleEnter={handleArticleEnter} handleArticleLeave={handleArticleLeave} />
           })}
         </motion.div>
       </div>

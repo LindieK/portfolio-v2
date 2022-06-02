@@ -19,6 +19,9 @@
         }
     }
 
+    &:hover {
+        cursor: pointer;
+    }
 
     @include mq(md) {
         width: 30%;
