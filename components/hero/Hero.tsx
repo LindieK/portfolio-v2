@@ -38,7 +38,7 @@ const Hero = () => {
             )
           })}
         </motion.h1>
-        <Link href="#projects" scroll={false}><a><motion.img variants={item} src="/Mouse Icon.svg" alt="mouse icon indicating scroll"/></a></Link>
+        <Link href="#projects" scroll={false}><a><motion.img variants={item} src="/images/Mouse Icon.svg" alt="mouse icon indicating scroll"/></a></Link>
       </motion.div>
     </section>
   );
