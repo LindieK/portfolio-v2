@@ -8,13 +8,17 @@ interface Card {
   thumbnail: string;
   title: string;
   link: string;
-  cardVariant: any
+  cardVariant: any;
+  handleArticleEnter: () => void;
+  handleArticleLeave: () => void;
 }
-const Card = ({thumbnail, title, link, cardVariant}: Card) => {
+const Card = ({thumbnail, title, link, cardVariant, handleArticleEnter, handleArticleLeave}: Card) => {
   return (
-    <motion.div className={styles.cardContainer} variants={cardVariant}>
-      <Image src={thumbnail} width={351} height={280} alt="article thumbnail"/>
-      <a href={link} target="_blank" rel="noreferrer"><h3>{title}</h3></a>
+    <motion.div className={styles.cardContainer} variants={cardVariant} onMouseEnter={handleArticleEnter} onMouseLeave={handleArticleLeave}>
+      <a href={link} target="_blank" rel="noreferrer">
+        <Image src={thumbnail} width={351} height={280} alt="article thumbnail"/>
+        <h3>{title}</h3>
+      </a>
     </motion.div>
   );
 }
