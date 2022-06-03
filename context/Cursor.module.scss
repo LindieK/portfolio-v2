@@ -1,0 +1,31 @@
+@import '../styles/mixins.scss';
+
+.cursor{
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left:0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+    display: none;
+  
+    @include mq(lg){
+      display: block;
+    }
+
+    & .cursorText {
+        flex: auto;
+        font-size: inherit;
+        pointer-events: none;
+        margin: auto;
+      }
+  }
+  
