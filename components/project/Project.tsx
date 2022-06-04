@@ -14,7 +14,7 @@ interface Project {
     link: string;
 }
 
-const transition = { delay: 1, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
+const transition = { delay: 0.5, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const projectVariants = {
   initial: { scale: 0.9, opacity: 0},
