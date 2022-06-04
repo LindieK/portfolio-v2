@@ -11,7 +11,8 @@
 
         & h3 {
             font-size: 1.111111em; //20px
-            color: $black-40;
+            margin: 2.222222rem 0;
+            color: $white;
     
             &:hover {
                 color: $white;
@@ -19,6 +20,7 @@
     
             @include mq(lg){
                 font-size: 1.333333em; //24px
+                color: $black-40;
             }
         }
     }
@@ -27,7 +29,10 @@
         cursor: pointer;
     }
 
-    @include mq(md) {
+    @include mq(sm) {
+        width: 27.7777777rem; //500px
+    }
+    @include mq(lg) {
         width: 30%;
         padding: 0;
     }
