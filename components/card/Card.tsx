@@ -32,7 +32,7 @@ const Card = ({thumbnail, title, link}: Card) => {
   return (
     <motion.div className={styles.cardContainer} ref={ref} variants={cardVariant} initial="initial" animate={cardControl} onMouseEnter={articleEnter} onMouseLeave={articleLeave}>
       <a href={link} className={styles.link} target="_blank" rel="noreferrer">
-        <Image src={thumbnail} width={1300} height={1300} layout="responsive" alt="article thumbnail"/>
+        <Image src={thumbnail} width={1300} height={1000} layout="responsive" alt="article thumbnail"/>
         <h3>{title}</h3>
       </a>
     </motion.div>
