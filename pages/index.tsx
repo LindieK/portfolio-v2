@@ -16,8 +16,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Linda Okorie</title>
         <meta name="description" content="Linda Okorie - Product Engineer" />
-        <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel="icon" href="/favicon-32x32.png" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
+        <link rel="apple-touch-icon" href="/favicons/apple-icon-180x180.png" sizes='180x180' />
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png"></link>
+        <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
       </Head>
       
       
