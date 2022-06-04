@@ -4,12 +4,8 @@ import styles from "./Projects.module.scss"
 import { projects } from '../../public/page-data';
 import Project from '../project/Project';
 
-interface Projects {
-  handleProjectEnter: () => void;
-  handleProjectLeave: () => void;
-}
 
-const Projects = ({ handleProjectEnter, handleProjectLeave} : Projects) => {
+const Projects = () => {
 
   return (
     <section id="projects" className={styles.projects}>
@@ -21,7 +17,7 @@ const Projects = ({ handleProjectEnter, handleProjectLeave} : Projects) => {
         <div>
           {projects.map((item, index) => {
             return(
-              <Project key={index} thumbnail={item.thumbnail} title={item.title} desc={item.description} tools={item.tools} link={item.link} handleProjectEnter={handleProjectEnter} handleProjectLeave={handleProjectLeave} />
+              <Project key={index} thumbnail={item.thumbnail} title={item.title} desc={item.description} tools={item.tools} link={item.link} />
             )
           })}
         </div>

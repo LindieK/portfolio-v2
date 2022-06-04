@@ -2,6 +2,7 @@ import React, { useEffect }  from 'react'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import { useCursorContext } from '../../context/CursorContext'
 import ArrowIcon from './ArrowIcon'
 import styles from "./Project.module.scss"
 
@@ -11,11 +12,9 @@ interface Project {
     desc: string;
     tools: string[];
     link: string;
-    handleProjectEnter: () => void;
-    handleProjectLeave: () => void
 }
 
-const transition = { delay: 1, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
+const transition = { delay: 0.5, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const projectVariants = {
   initial: { scale: 0.9, opacity: 0},
@@ -34,7 +33,8 @@ const toolsList = {
     }
 }
 
-const Project = ({thumbnail, title, desc, tools, link, handleProjectEnter, handleProjectLeave}: Project) => {
+const Project = ({thumbnail, title, desc, tools, link}: Project) => {
+    const { projectEnter, projectLeave } = useCursorContext();
     const control = useAnimation();
     const [ ref, inView ] = useInView();
     
@@ -49,13 +49,13 @@ const Project = ({thumbnail, title, desc, tools, link, handleProjectEnter, handl
         <div className={styles.flexItemWrapper}>
             <motion.div className={styles.imageWrapper} variants={ImageVariant}  whileHover="hover">
                 <a href={link} target="_blank" rel="noreferrer">
-                    <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`} onMouseEnter={handleProjectEnter} onMouseLeave={handleProjectLeave}/>
+                    <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`} onMouseEnter={projectEnter} onMouseLeave={projectLeave}/>
                 </a>
             </motion.div>
         </div>
         <div className={styles.flexItemWrapper}>
             <div className={styles.projectText}>
-                <a href={link} className={styles.title} target="_blank" rel="noreferrer" onMouseEnter={handleProjectEnter} onMouseLeave={handleProjectLeave}>
+                <a href={link} className={styles.title} target="_blank" rel="noreferrer" onMouseEnter={projectEnter} onMouseLeave={projectLeave}>
                     <h3>{title}</h3>
                     <div className={styles.svgWrapper}>
                         <ArrowIcon variant={ImageVariant} hover="hover"/>
