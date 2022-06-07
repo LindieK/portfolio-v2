@@ -10,7 +10,7 @@ const Footer = () => {
       <span>Linda Okorie &copy; 2022</span>
       <div className={styles.links}>
         {FooterLinks.map((item, index) => {
-          return <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</a>
+          return <a key={index} data-cy={item.name} href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</a>
         })}
       </div>
     </div>
