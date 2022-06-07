@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <motion.div initial="hidden" animate="visible" variants={container} className={`container ${styles.box}`}>
-        <motion.h1 variants={sentence} initial="hidden" animate="visible">
+        <motion.h1 variants={sentence} initial="hidden" animate="visible" data-cy="heroText">
           {HeroText.split("").map((char, index) => {
             return (
               <motion.span key={char + "_" + index} variants={letter}>
@@ -38,7 +38,7 @@ const Hero = () => {
             )
           })}
         </motion.h1>
-        <Link href="#projects" scroll={false}><a><motion.img variants={item} src="/images/Mouse Icon.svg" alt="mouse icon indicating scroll"/></a></Link>
+        <Link href="#projects" scroll={false}><a><motion.img data-cy="scroll" variants={item} src="/images/Mouse Icon.svg" alt="mouse icon indicating scroll"/></a></Link>
       </motion.div>
     </section>
   );
