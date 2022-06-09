@@ -118,7 +118,7 @@ const CursorProvider = ({ children }: any) => {
 
     return (
         <CursorContext.Provider value={{projectEnter, projectLeave, articleEnter, articleLeave}}>
-            <motion.div className={styles.cursor} variants={variants} animate={cursorVariant} style={{translateX: cursorXSpring, translateY: cursorYSpring}}>
+            <motion.div data-cy="cursor" className={styles.cursor} variants={variants} animate={cursorVariant} style={{translateX: cursorXSpring, translateY: cursorYSpring}}>
                 <span className={styles.cursorText}>{cursorText}</span>
             </motion.div>
             {children}
