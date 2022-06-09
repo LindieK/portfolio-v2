@@ -1,11 +1,11 @@
 import React from 'react'
 
 import styles from "./Projects.module.scss"
-import { projects } from '../../public/page-data';
+import { Projects } from '../../types'; 
 import Project from '../project/Project';
 
 
-const Projects = () => {
+const Projects = ({projects}: Projects) => {
 
   return (
     <section id="projects" className={styles.projects}>
@@ -17,7 +17,7 @@ const Projects = () => {
         <div>
           {projects.map((item, index) => {
             return(
-              <Project key={index} thumbnail={item.thumbnail} title={item.title} desc={item.description} tools={item.tools} link={item.link} />
+              <Project key={index} thumbnail={item.thumbnail} title={item.title} description={item.description} tools={item.tools} link={item.link} />
             )
           })}
         </div>
