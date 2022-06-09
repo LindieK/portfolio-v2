@@ -3,6 +3,7 @@ const selectors = {
     heroText: '[data-cy="heroText"]',
     scrollIcon: '[data-cy="scroll"]',
     project: '[data-cy="project"]',
+    projectTitle: '[data-cy="title"]',
     article: '[data-cy="article"]',
     linkedIn: '[data-cy=LinkedIn]',
     github: '[data-cy=Github]',
@@ -17,6 +18,32 @@ describe('Portfolio Page', ()=> {
     before(()=> {
         //Arrange
         cy.visit("http://localhost:3000/")
+    })
+
+    context('Cursor', ()=> {
+        it('should not render on small screens', ()=> {
+            cy.viewport('iphone-8')
+                .get(selectors.cursor).should('have.css', 'display', 'none')
+        })
+        it('should render on large screens', ()=> {
+            cy.viewport('macbook-15')
+            .get(selectors.cursor).should('not.have.css', 'display', 'none')
+        })
+        it('should change style when hover on project image', ()=> {
+            cy.get(`${selectors.project} img`).first().scrollIntoView().trigger('mouseover')
+            cy.get(selectors.cursor).should('have.css', 'background-color', 'rgb(146, 254, 157)')
+            cy.get(selectors.cursor).contains('View Project')
+        })
+        it('should change style when hover on project title', ()=> {
+            cy.get(selectors.projectTitle).first().scrollIntoView().trigger('mouseover')
+            cy.get(selectors.cursor).should('have.css', 'background-color', 'rgb(146, 254, 157)')
+            cy.get(selectors.cursor).contains('View Project')
+        })
+        it('should change style when hover on article', ()=> {
+            cy.get(selectors.article).first().scrollIntoView().trigger('mouseover')
+            cy.get(selectors.cursor).should('have.css', 'background-color', 'rgb(0, 201, 255)')
+            cy.get(selectors.cursor).contains('Read Article')
+        })
     })
 
     context('Hero',()=> {
