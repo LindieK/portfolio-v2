@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import { HeroText, projects, articles, footerLinks } from '../public/page-data'
 import Hero from '../components/hero/Hero'
 import Projects from '../components/projects/Projects'
 import Articles from '../components/articles/Articles'
@@ -26,11 +27,11 @@ const Home: NextPage = () => {
       </Head>
       
       
-      <Hero />
-      <Projects />
-      <Articles />
+      <Hero heroText={HeroText} />
+      <Projects projects={projects} />
+      <Articles articles={articles} />
       <Tools />
-      <Footer />
+      <Footer links={footerLinks} />
     </div>
   )
 }

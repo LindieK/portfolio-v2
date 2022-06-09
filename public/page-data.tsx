@@ -43,7 +43,7 @@ export const articles = [
     }
 ];
 
-export const FooterLinks = [
+export const footerLinks = [
     {
         name:"LinkedIn",
         link:"https://linkedin.com/in/linda-okorie/"

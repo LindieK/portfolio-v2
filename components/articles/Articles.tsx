@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
+import { Articles } from "../../types";
 import styles from './Articles.module.scss';
-import { articles } from '../../public/page-data';
 import Card from "../card/Card";
 
 
-const Articles = () => {
+const Articles = ({articles}: Articles) => {
 
   return (
     <section id="#articles" className={styles.articles}>

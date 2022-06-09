@@ -2,17 +2,11 @@ import React, { useEffect }  from 'react'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import { Project } from '../../types';
 import { useCursorContext } from '../../context/CursorContext'
 import ArrowIcon from './ArrowIcon'
 import styles from "./Project.module.scss"
 
-interface Project {
-    thumbnail: string;
-    title: string;
-    desc: string;
-    tools: string[];
-    link: string;
-}
 
 const transition = { delay: 0.5, duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }
 
@@ -33,7 +27,7 @@ const toolsList = {
     }
 }
 
-const Project = ({thumbnail, title, desc, tools, link}: Project) => {
+const Project = ({thumbnail, title, description, tools, link}: Project) => {
     const { projectEnter, projectLeave } = useCursorContext();
     const control = useAnimation();
     const [ ref, inView ] = useInView();
@@ -45,7 +39,7 @@ const Project = ({thumbnail, title, desc, tools, link}: Project) => {
     }, [control, inView]);
 
   return (
-    <motion.div className={styles.project} ref={ref} animate={control} initial="initial" variants={projectVariants}>
+    <motion.div data-cy="project" className={styles.project} ref={ref} animate={control} initial="initial" variants={projectVariants}>
         <div className={styles.flexItemWrapper}>
             <motion.div className={styles.imageWrapper} variants={ImageVariant}  whileHover="hover">
                 <a href={link} target="_blank" rel="noreferrer">
@@ -55,13 +49,13 @@ const Project = ({thumbnail, title, desc, tools, link}: Project) => {
         </div>
         <div className={styles.flexItemWrapper}>
             <div className={styles.projectText}>
-                <a href={link} className={styles.title} target="_blank" rel="noreferrer" onMouseEnter={projectEnter} onMouseLeave={projectLeave}>
+                <a data-cy="title" href={link} className={styles.title} target="_blank" rel="noreferrer" onMouseEnter={projectEnter} onMouseLeave={projectLeave}>
                     <h3>{title}</h3>
                     <div className={styles.svgWrapper}>
                         <ArrowIcon variant={ImageVariant} hover="hover"/>
                     </div>
                 </a>
-                <p>{desc}</p>
+                <p>{description}</p>
                 <div className={styles.tools}>
                     {tools.map((item, index) => <motion.span key={`${item}_${index}` } variants={toolsList} whileHover="hover">{item}</motion.span>)}
                 </div>
