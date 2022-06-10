@@ -2,10 +2,10 @@ import React from "react";
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
-import { HeroText } from "../../public/page-data";
+import { Hero } from "../../types";
 import styles from "./Hero.module.scss"
 
-const Hero = () => {
+const Hero = ({ heroText }: Hero) => {
   const container = {
     hidden: { opacity: 0, transition:{ when: "afterChildren"} },
     visible: { opacity: 1, transition: { when: "beforeChildren", staggerChildren: 0.1, delayChildren: 0.5}}
@@ -30,7 +30,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <motion.div initial="hidden" animate="visible" variants={container} className={`container ${styles.box}`}>
         <motion.h1 variants={sentence} initial="hidden" animate="visible" data-cy="heroText">
-          {HeroText.split("").map((char, index) => {
+          {heroText.split("").map((char, index) => {
             return (
               <motion.span key={char + "_" + index} variants={letter}>
                 {char}
