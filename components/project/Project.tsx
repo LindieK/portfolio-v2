@@ -42,7 +42,7 @@ const Project = ({thumbnail, title, description, tools, link}: Project) => {
     <motion.div data-cy="project" className={styles.project} ref={ref} animate={control} initial="initial" variants={projectVariants}>
         <div className={styles.flexItemWrapper}>
             <motion.div className={styles.imageWrapper} variants={ImageVariant}  whileHover="hover">
-                <a href={link} target="_blank" rel="noreferrer">
+                <a data-cy="image" href={link} target="_blank" rel="noreferrer">
                     <motion.img src={thumbnail} width='100%' height='100%' alt={`${title} thumbnail`} onMouseEnter={projectEnter} onMouseLeave={projectLeave}/>
                 </a>
             </motion.div>
