@@ -8,7 +8,7 @@ import Project from '../project/Project';
 const Projects = ({projects}: Projects) => {
 
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="projects" data-cy="projectSection" className={styles.projects}>
       <div className='container'>
         <div className={styles.sectionTitle}>
           <h2>Projects</h2>

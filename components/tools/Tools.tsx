@@ -5,7 +5,7 @@ import styles from './Tools.module.scss'
 
 const Tools = () => {
   return (
-    <section className={styles.tools}>
+    <section data-cy="tools" className={styles.tools}>
       <div className="container">
         <h3>Technologies used in building this site</h3>
         <div className={styles.imageContainer}>

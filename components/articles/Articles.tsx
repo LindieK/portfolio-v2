@@ -9,7 +9,7 @@ import Card from "../card/Card";
 const Articles = ({articles}: Articles) => {
 
   return (
-    <section id="#articles" className={styles.articles}>
+    <section id="#articles" data-cy="articlesSection" className={styles.articles}>
       <div className="container">
         <div className={styles.sectionTitle}>
           <h2>Articles</h2>
