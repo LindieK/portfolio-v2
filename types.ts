@@ -1,4 +1,4 @@
-export interface Hero {
+export interface HeroSection {
     heroText: string
 }
 
@@ -14,14 +14,14 @@ export interface Projects {
     projects: Project[]
 }
 
-export interface Card {
+export interface ArticleCard {
     thumbnail: string;
     title: string;
     link: string;
 }
 
-export interface Articles {
-    articles : Card[]
+export interface ArticlesSection {
+    articles : ArticleCard[]
 }
 
 interface Link {

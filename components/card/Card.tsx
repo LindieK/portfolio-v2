@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
 import styles from './Card.module.scss'
-import { Card } from "../../types";
+import { ArticleCard } from "../../types";
 import { useCursorContext } from '../../context/CursorContext'
 
 
@@ -14,7 +14,7 @@ const cardVariant = {
   enter: { scale: 1, opacity: 1, transition }
 }
 
-const Card = ({thumbnail, title, link}: Card) => {
+const Card = ({thumbnail, title, link}: ArticleCard) => {
   const { articleEnter, articleLeave } = useCursorContext();
   const cardControl = useAnimation();
   const [ ref, inView ] = useInView();
