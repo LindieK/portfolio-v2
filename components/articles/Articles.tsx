@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
-import { Articles } from "../../types";
+import { ArticlesSection } from "../../types";
 import styles from './Articles.module.scss';
 import Card from "../card/Card";
 
 
-const Articles = ({articles}: Articles) => {
+const Articles = ({articles}: ArticlesSection) => {
 
   return (
     <section id="#articles" data-cy="articlesSection" className={styles.articles}>
