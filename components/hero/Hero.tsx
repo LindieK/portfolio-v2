@@ -2,10 +2,10 @@ import React from "react";
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
-import { Hero } from "../../types";
+import { HeroSection } from "../../types";
 import styles from "./Hero.module.scss"
 
-const Hero = ({ heroText }: Hero) => {
+const Hero = ({ heroText }: HeroSection) => {
   const container = {
     hidden: { opacity: 0, transition:{ when: "afterChildren"} },
     visible: { opacity: 1, transition: { when: "beforeChildren", staggerChildren: 0.1, delayChildren: 0.5}}
