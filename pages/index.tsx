@@ -16,6 +16,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Linda Okorie</title>
+        <meta name="google-site-verification" content="zfIqIHm2tAJx_7QyStohfpQe3VigcxV3JV9QgRhD2nY" />
         <meta name="description" content="Linda Okorie - Product Engineer" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="msapplication-TileColor" content="#ffffff" />
