@@ -7,7 +7,7 @@ export const projects = [
         description: "A Photo Gallery (with a totally uninspired name) that allows you to view, download, search for, and add photos to a personal collection",
         tools: ["Firebase", "React", "Styled Components", "REST APIs"],
         thumbnail: "/images/photo-gallery.jpg",
-        link: "https://linda-photo-gallery.web.app"
+        link: "https://linda-photo-gallery.firebaseapp.com"
     },
     {
         title: "Shortly URL Shortener",
